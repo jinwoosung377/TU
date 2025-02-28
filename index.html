@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and general layout */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #eaeaea;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sticky Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 20px; /* Space from top when scrolling */
+            width: 220px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+            box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 20px;
+        }
+
+        /* Sidebar containers */
+        .sidebar .container {
+            background-color: #444;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar .container:hover {
+            background-color: #555;
+        }
+
+        /* Main content area */
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background-color:  #87CEEB;
+            color: gray;
+            padding: 30px;
+            font-size: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Content containers */
+        .main-content {
+            display: flex;
+            flex-direction: column; /* Stack containers vertically */
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .container {
+            background-color: #fff;
+            border: 2px solid #ddd;
+            margin: 15px;
+            padding: 20px;
+            height: 80px;
+            width: 80%; /* Adjust container width for vertical layout */
+            box-sizing: border-box;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animation for text */
+        .container h2 {
+            font-size: 18px;
+            color: #666;
+            transition: color 0.3s ease;
+        }
+
+        .container:hover h2 {
+            color:  #87CEEB;
+        }
+
+        /* Adding responsive design */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%; /* Adjust width for medium screens */
+            }
+            .sidebar {
+                width: 180px; /* Adjust width for small screens */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .container {
+                width: 95%; /* Adjust width for small screens */
+            }
+            .sidebar {
+                width: 160px; /* Adjust sidebar width for very small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    
+    <div class="container">
+        <h3> HOME </h3>
+    </div>
+    <div class="container">
+        <h3> content </h3>
+    </div>
+    <div class="container">
+    <h3> about us </h3>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="content">
+    <header>
+        <h1>UNIT & Syllabus</h1>
+    </header>
+
+    <div class="main-content">
+        <div class="container">
+            <h2>UNIT 1- internet & WWW</h2>
+        </div>
+        <div class="container">
+            <h2>UNIT 2- web planning</h2>
+        </div>
+        <div class="container">
+            <h2>UNIT 3- Webpage Typography Issues</h2>
+        </div>
+        <div class="container">
+            <h2>UNIT 4- web design</h2>
+        </div>
+        <div class="container">
+            <h2>UNIT 5- RWD & SEO</h2>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
